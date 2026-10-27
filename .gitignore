@@ -1,0 +1,32 @@
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Notebook state
+.ipynb_checkpoints/
+
+# OS metadata
+.DS_Store
+
+# EEG datasets are downloaded separately
+data/**/*
+!data/README.md
+!data/**/.gitkeep
+
+# Generated experiment outputs
+artifacts/**/*
+!artifacts/.gitkeep
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Local backups
+*.bak
+*.backup
+*.pre-*
+README.md.pre-*
+

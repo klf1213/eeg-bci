@@ -1,0 +1,32 @@
+seed: 42
+subjects: [A01, A02, A03, A04, A05, A06, A07, A08, A09]
+class_names: [left_hand, right_hand, feet, tongue]
+data:
+  original_sampling_rate: 250
+  target_sampling_rate: 128
+  low_frequency: 4.0
+  high_frequency: 40.0
+  n_channels: 22
+  remove_artifacts: true
+windows:
+  standard: {tmin: 2.5, tmax: 4.5}
+  wide: {tmin: 2.0, tmax: 6.0}
+model:
+  n_classes: 4
+  f1: 8
+  depth_multiplier: 2
+  f2: 16
+  temporal_kernel_length: 32
+  separable_kernel_length: 16
+  dropout: 0.5
+  attention_hidden_size: 16
+  attention_second_pool_size: 8
+  high_resolution_second_pool_size: 4
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 300
+  patience: 30
+  folds: 4
+  inner_validation_size: 0.15
